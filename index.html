@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avícola San Fresco | Inicio</title>
+    <title>Inicio | Avícola San Fresco</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Estilos base (Mismos que ya tienes) */
-        :root { --negro-puro: #000000; --amarillo: #ffcc00; --blanco: #ffffff; }
-        body { font-family: 'Outfit', sans-serif; background-color: var(--negro-puro); color: var(--blanco); margin: 0; }
-        nav { background-color: rgba(0, 0, 0, 0.95); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--amarillo); }
-        .logo { font-weight: 900; font-size: 1.8rem; color: var(--amarillo); text-decoration: none; text-transform: uppercase; }
-        .menu-links a { text-decoration: none; color: var(--blanco); font-weight: 700; margin-left: 20px; transition: 0.3s; }
-        .menu-links a:hover { color: var(--amarillo); }
-        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-        .hero h1 { font-size: 4rem; color: var(--amarillo); margin-bottom: 20px; }
-        .btn-principal { background: var(--amarillo); color: black; padding: 15px 30px; text-decoration: none; font-weight: 900; border-radius: 5px; text-transform: uppercase; }
-        footer { padding: 40px; text-align: center; color: var(--amarillo); border-top: 1px solid #222; }
+        :root { --negro: #000; --amarillo: #ffcc00; --blanco: #fff; --card: #0a0a0a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; background: var(--negro); color: var(--blanco); }
+        
+        nav { background: rgba(0,0,0,0.9); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--amarillo); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: 900; font-size: 1.8rem; color: var(--amarillo); text-decoration: none; }
+        .menu a { text-decoration: none; color: var(--blanco); font-weight: 700; margin-left: 20px; font-size: 0.9rem; transition: 0.3s; }
+        .menu a:hover, .menu a.active { color: var(--amarillo); }
+
+        .hero { height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; padding: 20px; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; color: var(--amarillo); line-height: 1; }
+        .hero p { font-size: 1.2rem; margin: 20px 0; max-width: 600px; }
+        .btn { background: var(--amarillo); color: #000; padding: 15px 40px; text-decoration: none; font-weight: 900; border-radius: 50px; text-transform: uppercase; transition: 0.3s; }
+        .btn:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(255,204,0,0.4); }
+
+        @media (max-width: 768px) { nav { flex-direction: column; gap: 15px; } .menu { display: flex; gap: 10px; margin: 0; } .menu a { margin: 0; font-size: 0.75rem; } }
     </style>
 </head>
 <body>
-<nav>
-    <a href="index.html" class="logo">SAN <span>FRESCO</span></a>
-    <div class="menu-links">
-        <a href="nosotros.html">NOSOTROS</a>
-        <a href="catalogo.html">CATÁLOGO</a>
-        <a href="pedidos.html">PEDIDOS</a>
-    </div>
-</nav>
-
-<section class="hero">
-    <h1>AVÍCOLA SAN FRESCO</h1>
-    <p style="font-size: 1.5rem; margin-bottom: 30px;">Calidad y frescura Premium en cada corte.</p>
-    <a href="catalogo.html" class="btn-principal">Ver Catálogo</a>
-</section>
-
-<footer><p>© 2026 AVÍCOLA SAN FRESCO</p></footer>
+    <nav>
+        <a href="index.html" class="logo">SAN <span>FRESCO</span></a>
+        <div class="menu">
+            <a href="index.html" class="active">INICIO</a>
+            <a href="nosotros.html">NOSOTROS</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="pedidos.html">PEDIDOS</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>CALIDAD<br>PREMIUM</h1>
+        <p>Distribuidora Elite de pollo fresco. Del campo a tu mesa con higiene absoluta.</p>
+        <a href="catalogo.html" class="btn">Explorar Menú</a>
+    </section>
 </body>
 </html>
