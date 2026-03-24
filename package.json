@@ -1,0 +1,16 @@
+{
+  "name": "san-fresco",
+  "version": "1.0.0",
+  "description": "Avícola San Fresco - Static website with Vercel Web Analytics",
+  "type": "module",
+  "scripts": {
+    "deploy": "vercel deploy",
+    "deploy:prod": "vercel deploy --prod"
+  },
+  "keywords": ["static-site", "vercel", "analytics"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
