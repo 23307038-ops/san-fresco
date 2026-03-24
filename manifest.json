@@ -3,17 +3,17 @@
   "name": "Avícola San Fresco - Delivery",
   "icons": [
     {
-      "src": "icono.png",
+      "src": "icono.jpeg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpeg"
     },
     {
-      "src": "icono.png",
+      "src": "icono.jpeg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpeg"
     }
   ],
-  "start_url": "index.jpeg",
+  "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#ff0000",
   "background_color": "#ffffff"
