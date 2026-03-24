@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | Avícola San Fresco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --negro-puro: #000000;
+            --negro-card: #0a0a0a;
+            --amarillo: #ffcc00;
+            --blanco: #ffffff;
+            --gris-borde: #222222;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--negro-puro);
+            color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--amarillo);
+        }
+
+        .logo { font-weight: 900; font-size: 1.8rem; color: var(--amarillo); text-decoration: none; text-transform: uppercase; }
+        .logo span { color: var(--blanco); }
+
+        .menu-links a { text-decoration: none; color: var(--blanco); font-weight: 700; margin-left: 20px; transition: 0.3s; font-size: 0.9rem; }
+        .menu-links a:hover { color: var(--amarillo); }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header-section {
+            margin-bottom: 60px;
+        }
+
+        .header-section h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem); /* Ajustable según pantalla */
+            font-weight: 900;
+            color: var(--amarillo);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .header-section p {
+            font-size: 1.2rem;
+            color: #888;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        /* --- GRID RESPONSIVO --- */
+        .grid-nosotros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card-nosotros {
+            background: var(--negro-card);
+            padding: 50px 30px;
+            border-radius: 20px;
+            border: 1px solid var(--gris-borde);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-nosotros:hover {
+            border-color: var(--amarillo);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 204, 0, 0.1);
+        }
+
+        .icono-amarillo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .card-nosotros h3 {
+            color: var(--amarillo);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        .card-nosotros p {
+            color: #cccccc;
+            font-size: 1.05rem;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            margin-top: 100px;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--gris-borde);
+            color: var(--amarillo);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* --- AJUSTES MÓVILES --- */
+        @media (max-width: 768px) {
+            nav { flex-direction: column; gap: 15px; padding: 15px; }
+            .menu-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            .menu-links a { margin: 0 10px; font-size: 0.8rem; }
+            .grid-nosotros { grid-template-columns: 1fr; } /* Una sola columna en móvil */
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo">SAN <span>FRESCO</span></a>
+    <div class="menu-links">
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html" style="color: var(--amarillo);">NOSOTROS</a>
+        <a href="catalogo.html">CATÁLOGO</a>
+        <a href="pedidos.html">PEDIDOS</a>
+    </div>
+</nav>
+
+<main class="container">
+    <header class="header-section">
+        <h1>Nuestra Historia</h1>
+        <p>Llevamos la frescura del campo directamente a tu hogar con procesos de alta calidad y una logística diseñada para exigentes.</p>
+    </header>
+
+    <div class="grid-nosotros">
+        <article class="card-nosotros">
+            <span class="icono-amarillo">🎯</span>
+            <h3>Misión</h3>
+            <p>Entregar frescura inigualable y cortes seleccionados bajo los más altos estándares de higiene para la mesa de cada familia mexicana.</p>
+        </article>
+
+        <article class="card-nosotros">
+            <span class="icono-amarillo">🚀</span>
+            <h3>Visión</h3>
+            <p>Consolidarnos como la distribuidora número uno a nivel regional, reconocida por nuestra innovación logística y calidad de origen.</p>
+        </article>
+
+        <article class="card-nosotros">
+            <span class="icono-amarillo">🤝</span>
+            <h3>Compromiso</h3>
+            <p>Higiene absoluta en el manejo de alimentos, puntualidad rigurosa en cada entrega y una atención personalizada nivel VIP.</p>
+        </article>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 AVÍCOLA SAN FRESCO | CALIDAD ELITE</p>
+</footer>
+
+</body>
+</html>
